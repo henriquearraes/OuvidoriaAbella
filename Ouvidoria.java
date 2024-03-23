@@ -89,7 +89,7 @@ public class Ouvidoria {
 	
 		}while (opcao!=5);
 		
-		JOptionPane.showMessageDialog(null, "Obrigado por usar o sistema"); //Agradecimento por usar o aplicativo, já que digitando 4 ele sai do while.
+		JOptionPane.showMessageDialog(null, "Obrigado por usar o sistema\nHenrique Arraes\ne\nAlexandreArraes"); //Agradecimento por usar o aplicativo, já que digitando 4 ele sai do while.
 		
 	}
 }
