@@ -63,7 +63,7 @@ public class Ouvidoria {
 						JOptionPane.showMessageDialog(null, "Posição inválida!");
 						}
 				}else {
-					JOptionPane.showMessageDialog(null, "Não existem Feedbacks a serem removidos.\nAdicione um filme primeiro para aparecer na lista!"); // Se não tiver nada na lista, isso aparece
+					JOptionPane.showMessageDialog(null, "Não existem Feedbacks a serem removidos.\nAdicione um Feedback primeiro para aparecer na lista!"); // Se não tiver nada na lista, isso aparece
 				}	
 			
 			}else if(opcao==4) { //opçao deve ser igual a 4 para entrar nessa janela
