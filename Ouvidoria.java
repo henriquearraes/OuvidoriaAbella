@@ -1,7 +1,5 @@
-package estudeAqui;
-
+package ouvidoriaclasscomplete;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import javax.swing.JOptionPane;
 
@@ -16,29 +14,22 @@ public class Ouvidoria {
 		
 		
 		do {
-		//menu
+		//menu é melhor do while
 		String opcaoStr=JOptionPane.showInputDialog("             - Manifestações -\n1) Listar os Feedbacks\n2) Adicionar um Feedback\n3) Remover um Feedback\n4) Pesquisar pelo Código\n5) Sair");
-		
-		opcao = Integer.parseInt(opcaoStr); //transforma a String em Integer.
-		
-			if(opcao==1) { //opçao deve ser igual a 1 para entrar nessa janela
-				
-					if(recla.size() > 0) { //Puxa o número de feedbacks registrados caso seja maior que 0
-					
-					String reclamacoes = "             - Lista de Reclamações -               \n"; //cria uma variavel que guarda os feedbacks
-					
-					for (String feedback : recla) {
-						reclamacoes += "- " + feedback + "\n"; // Organiza os Feedbacks
-					}
+			opcao = Integer.parseInt(opcaoStr); //transforma a String em Integer.
+				if(opcao==1) { //opçao deve ser igual a 1 para entrar nessa janela
+					if(recla.size() > 0) { //Puxa o número de feedbacks registrados caso seja maior que 0	
+						String reclamacoes = "             - Lista de Reclamações -               \n"; //cria uma variavel que guarda os feedbacks
+						for (String feedback : recla) {
+							reclamacoes += "- " + feedback + "\n"; // Organiza os Feedbacks
+						}
 					
 					JOptionPane.showMessageDialog(null, reclamacoes); //imprime os feedbacks
+						
+						} else { //caso não tenha feedbacks, ou seja, feedbacks = 0, ele imprime isso abaixo:
 					
-					
-				} else { //caso não tenha feedbacks, ou seja, feedbacks = 0, ele imprime isso abaixo:
-					
-					JOptionPane.showMessageDialog(null, "Não há feedbacks registrados.");
-				}
-				
+							JOptionPane.showMessageDialog(null, "Não há feedbacks registrados.");
+						}	
 				
 			}else if (opcao==2) { //opçao deve ser igual a 2 para entrar nessa janela
 				//Adicionar Reclamação
@@ -49,7 +40,7 @@ public class Ouvidoria {
 			}else if (opcao==3) { //opçao deve ser igual a 3 para entrar nessa janela
 				if(recla.size()>0) {
 					String ListaReclamacoes = "             - Lista de Feedbacks para Remoção -             \n";
-					for (int numerofeedback = 0; numerofeedback <recla.size();numerofeedback++) { //for para consultar a lista e ir de um em um (1+1+1+1+1)
+						for (int numerofeedback = 0; numerofeedback <recla.size();numerofeedback++) { //for para consultar a lista e ir de um em um (1+1+1+1+1)
 						ListaReclamacoes+=numerofeedback+1 +"° Feedback: "+recla.get(numerofeedback)+"\n"; // Código para listar antes da opção de remover
 					}
 					JOptionPane.showMessageDialog(null, ListaReclamacoes); //Aparece na tela a lista de feedbacks
@@ -59,7 +50,7 @@ public class Ouvidoria {
 						if(remocaoFeedback>=1 && remocaoFeedback<=recla.size()) {
 								recla.remove(remocaoFeedback-1); // remove o feedback de acordo com a numeração do usuário
 								JOptionPane.showMessageDialog(null, "Feedback removido com sucesso!"); //Concluído
-						}else {
+						}else{
 						JOptionPane.showMessageDialog(null, "Posição inválida!");
 						}
 				}else {
@@ -89,8 +80,7 @@ public class Ouvidoria {
 	
 		}while (opcao!=5);
 		
-		JOptionPane.showMessageDialog(null, "Obrigado por usar o sistema\n\n        Henrique Arraes\n                        e\n        AlexandreArraes"); //Agradecimento por usar o aplicativo, já que digitando 4 ele sai do while.
-		
+		JOptionPane.showMessageDialog(null, "Obrigado por usar o sistema\n\n        Henrique Arraes\n                        e \n        Alexandre Arraes"); //Agradecimento por usar o aplicativo, já que digitando 4 ele sai do while.
 		
 	}
 }
