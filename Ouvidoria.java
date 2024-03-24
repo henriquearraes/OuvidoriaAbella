@@ -55,9 +55,9 @@ public class Ouvidoria {
 					JOptionPane.showMessageDialog(null, ListaReclamacoes); //Aparece na tela a lista de feedbacks
 					String removerFeedbackStr = JOptionPane.showInputDialog("Digite um Feedback para removê-lo da lista: ");//Pede ao usuário para digitar um numero de feedback
 					int removerFeedback = Integer.parseInt(removerFeedbackStr); //Converte de String para inteiro
-					int remocaoFeedback=removerFeedback-1;
+					int remocaoFeedback=removerFeedback;
 						if(remocaoFeedback>=1 && remocaoFeedback<=recla.size()) {
-								recla.remove(remocaoFeedback); // remove o feedback de acordo com a numeração do usuário
+								recla.remove(remocaoFeedback-1); // remove o feedback de acordo com a numeração do usuário
 								JOptionPane.showMessageDialog(null, "Feedback removido com sucesso!"); //Concluído
 						}else {
 						JOptionPane.showMessageDialog(null, "Posição inválida!");
@@ -89,7 +89,8 @@ public class Ouvidoria {
 	
 		}while (opcao!=5);
 		
-		JOptionPane.showMessageDialog(null, "Obrigado por usar o sistema\nHenrique Arraes\ne\nAlexandreArraes"); //Agradecimento por usar o aplicativo, já que digitando 4 ele sai do while.
+		JOptionPane.showMessageDialog(null, "Obrigado por usar o sistema\n\n        Henrique Arraes\n                        e\n        AlexandreArraes"); //Agradecimento por usar o aplicativo, já que digitando 4 ele sai do while.
+		
 		
 	}
 }
